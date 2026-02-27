@@ -3,6 +3,7 @@ from core import Device
 class Thermostat(Device):
     __current_temp = None
     __target_temp = None
+    __is_on = None
 
     def __init__(self, device_id: str, target_temp: float):
         super().__init__(device_id)
