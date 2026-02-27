@@ -5,7 +5,7 @@ from beleuchtung import Light
 from klima import Thermostat
 
 from security import AlarmSystem
-from sensorik import Room, Sensor
+from sensorik import Room
 
 # Eine Demo Funktion um einmal eine SmartHome Instanz zu erzeugen und zu demonstrieren 
 # wie die Aggregation und Instanziierung der anderen Klassen funktioniert
