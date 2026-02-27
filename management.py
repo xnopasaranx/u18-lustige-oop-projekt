@@ -1,3 +1,5 @@
+from core import Device
+
 class SmartHome(object):
     __owner = None
     __all_devices = None
