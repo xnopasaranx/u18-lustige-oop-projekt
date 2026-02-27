@@ -51,7 +51,7 @@ class Thermostat(Device):
         self.__is_on = True
 
 
-class Management(object):
+class SmartHome(object):
     __owner = None
     __all_devices = None
 
