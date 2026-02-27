@@ -8,4 +8,4 @@ class Device:
     def turn_of():
         pass
     def getinfo(self):
-        return self.__device, self.__on
+        return self.__device
