@@ -4,18 +4,21 @@ class Room(object):
     __room_name = None                     
     __sensors = None
 
-    def __init__(self, room_name: str):        # konstruktor  wird automatisch beim erstellen aufgerufen
-        self.__room_name = room_name              # instanz attribut gehört zu diesem (objekt)
-        self.__sensors = []                   # liste für sensor-Objekte (komposition)
+    # konstruktor  wird automatisch beim erstellen aufgerufen
+    def __init__(self, room_name: str):
+        # instanz attribut gehört zu diesem (objekt)        
+        self.__room_name = room_name
+        # liste für sensor-Objekte (komposition)              
+        self.__sensors = []                   
 
 
     def add_new_sensor(self, typ: str):
-        neu_sensor = Sensor(typ)                # neu attribute
+        # neue attribute
+        neu_sensor = Sensor(typ)                
         self.__sensors.append(neu_sensor)
 
     def get_sensors(self) -> list:
         return self.__sensors
-
 
     def auslesen(self):
         for i in range(len(self.__sensors)):
