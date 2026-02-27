@@ -34,17 +34,26 @@ def init_demo():
 print(init_demo())
 
 def init_alarm_demo():
+    # Raum instanziieren
     meineRoom = Room("N1")
+
+    # 3 Sensoren zum Test hinzufügen
     meineRoom.add_new_sensor("sensor Nr:1")
     meineRoom.add_new_sensor("sensor Nr:2")
     meineRoom.add_new_sensor("sensor Nr:3")
 
+    # hier kriegen wir nun eine Testausgabe
     meineRoom.auslesen()
 
+    # Ein neues Alarmsystem instanziieren
     alarm_sys = AlarmSystem(security_level=5)
+    
+    # Jeden Sensor aus dem Raum durchgehen
     for sensor in meineRoom.get_sensors():
+        # jede Sensor Instanz zu Alarm System hinzufügen
         alarm_sys.add_external_sensors(sensor)
     
+    # Daten ausgeben um zu testen ob das alles funktioniert
     print(alarm_sys.get_active_sensors())
     print(alarm_sys.get_security_level())
     print(alarm_sys.trigger_alarm())
