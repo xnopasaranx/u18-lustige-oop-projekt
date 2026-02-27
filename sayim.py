@@ -20,7 +20,7 @@ class Room(object):                     # klasse Room erbt von (object)
 
 
 class Sensor(object):                       # klasse sensor
-    sensor_type= None                   # klassen attribut (nur für mich nicht wirklich benutzt)
+    sensor_type= None                    # klassen attribut (nur für mich nicht wirklich benutzt)
 
     def __init__(self, sensor_typ : str):       # konstruktor sind hier
         self.sensor_typ = sensor_typ
@@ -37,7 +37,7 @@ class Sensor(object):                       # klasse sensor
 
 
 meineRoom = Room("N1")              #room kommt oben init metode rein nicht vergessen
-meineRoom.add_new_sensor("sensor no1")
+meineRoom.add_new_sensor("sensor Nr:1")
 meineRoom.auslessen()
 
 # was hat ein calssen (object) = die haben atributen und methode
@@ -47,12 +47,12 @@ meineRoom.auslessen()
 # attribute:
 #  speichern Daten
 #  gehören zu einem Objekt (Instanzattribute)
-# → Können privat sein (mit __ vor dem Namen)
+#  können privat sein (mit __ vor dem Namen)
 
 # Methoden:
-# → Sind Funktionen innerhalb einer Klasse
-# → Können auf Attribute zugreifen
-# → Meist öffentlich und von außen aufrufbar
+#  sind Funktionen innerhalb einer Klasse
+#  können auf Attribute zugreifen
+#  meist öffentlich und von außen aufrufbar
 
 
 
