@@ -1,6 +1,3 @@
-class Device(object):
-    pass
-
 class Management(object):
     __owner = None
     __all_devices = None
