@@ -4,6 +4,9 @@ from management import SmartHome
 from beleuchtung import Light
 from klima import Thermostat
 
+from security import AlarmSystem
+from sensorik import Room, Sensor
+
 # Eine Demo Funktion um einmal eine SmartHome Instanz zu erzeugen und zu demonstrieren 
 # wie die Aggregation und Instanziierung der anderen Klassen funktioniert
 
@@ -29,3 +32,8 @@ def init_demo():
     return [dev.getinfo() for dev in demo_management.status_report()]
 
 print(init_demo())
+
+
+meineRoom = Room("N1")
+meineRoom.add_new_sensor("sensor Nr:1")
+meineRoom.auslesen()
