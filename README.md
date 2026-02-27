@@ -1,2 +1,2 @@
-# u18-lustiges-pfiffiges-oop-projekt
+# u18-lustiges-oop-projekt
 OOP Projekt der U18
