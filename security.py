@@ -1,3 +1,5 @@
+from sensorik import Sensor
+
 class AlarmSystem(object):
     __security_level = None
     __active_sensors = None
@@ -15,7 +17,7 @@ class AlarmSystem(object):
     def trigger_alarm(self):
         return f"\033[91mHalte Ein, Abschaum!!!So WEHRE DICH NICHT!!! Auf das Ich dir sonst verpasse, eine Fraktur!!!\033[0m"
 
-    def add_external_sensors(self, sensor: object):
+    def add_external_sensors(self, sensor: Sensor):
         # Von andre heißt die get-Methode zu der Klasse Sensor --> getsensor()
         # Füge mit der get-Methode, den ausgelesesenen Sensor-Typ, der mit dem Argument übegeben wurde, der Liste hinzu
         self.__active_sensors.append(sensor.getsensor())
