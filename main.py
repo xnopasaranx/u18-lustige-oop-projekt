@@ -33,7 +33,20 @@ def init_demo():
 
 print(init_demo())
 
+def init_alarm_demo():
+    meineRoom = Room("N1")
+    meineRoom.add_new_sensor("sensor Nr:1")
+    meineRoom.add_new_sensor("sensor Nr:2")
+    meineRoom.add_new_sensor("sensor Nr:3")
 
-meineRoom = Room("N1")
-meineRoom.add_new_sensor("sensor Nr:1")
-meineRoom.auslesen()
+    meineRoom.auslesen()
+
+    alarm_sys = AlarmSystem(security_level=5)
+    for sensor in meineRoom.get_sensors():
+        alarm_sys.add_external_sensors(sensor)
+    
+    print(alarm_sys.get_active_sensors())
+    print(alarm_sys.get_security_level())
+    print(alarm_sys.trigger_alarm())
+
+init_alarm_demo()

@@ -1,20 +1,25 @@
-
-class Room(object):                     # klasse Room erbt von (object)
-    room_name = None                     # klassen attribut (nur für mich nicht wirklich benutzt)
+# klasse Room erbt von (object)
+class Room(object):                     
+    # klassen attribut (nur für mich nicht wirklich benutzt)
+    __room_name = None                     
+    __sensors = None
 
     def __init__(self, room_name: str):        # konstruktor  wird automatisch beim erstellen aufgerufen
-        self.room_name = room_name              # instanz attribut gehört zu diesem (objekt)
-        self.sensors = []                   # liste für sensor-Objekte (komposition)
+        self.__room_name = room_name              # instanz attribut gehört zu diesem (objekt)
+        self.__sensors = []                   # liste für sensor-Objekte (komposition)
 
 
     def add_new_sensor(self, typ: str):
         neu_sensor = Sensor(typ)                # neu attribute
-        self.sensors.append(neu_sensor)
+        self.__sensors.append(neu_sensor)
+
+    def get_sensors(self) -> list:
+        return self.__sensors
 
 
     def auslesen(self):
-        for i in range(len(self.sensors)):
-            print(self.sensors[i].get_typ())
+        for i in range(len(self.__sensors)):
+            print(self.__sensors[i].getsensor())
 
 
 class Sensor(object):
