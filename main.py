@@ -17,6 +17,6 @@ def init_demo():
     for dev in devices:
         demo_management.register_device(dev)
 
-    return demo_management.status_report()
+    return [dev.getinfo() for dev in demo_management.status_report()]
 
 print(init_demo())
