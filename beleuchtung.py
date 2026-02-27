@@ -17,5 +17,5 @@ class Light(Device):
     def turn_on(self):
         self.__is_on = True
 
-    def get_brightness(self):
+    def get_brightness(self) ->int:
         return self.__brightness

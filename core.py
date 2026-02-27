@@ -11,8 +11,8 @@ class Device(object):
     def turn_off():
         pass
     
-    def getstatus(self):
+    def getstatus(self) -> bool:
         return self.__is_on
     
-    def getinfo(self):
+    def getinfo(self) -> str:
         return self.__device_id

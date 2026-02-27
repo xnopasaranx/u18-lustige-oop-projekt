@@ -18,7 +18,7 @@ class Thermostat(Device):
     def turn_on(self):
         self.__is_on = True
 
-    def get_temp(self):
+    def get_temp(self) -> tuple:
         temp = self.__current_temp
         temp2 = self.__target_temp
         return temp, temp2

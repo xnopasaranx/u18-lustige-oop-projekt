@@ -11,5 +11,5 @@ class SmartHome(object):
     def register_device(self, d: Device):
         self.__all_devices.append(d)
     
-    def status_report(self):
+    def status_report(self) -> list:
         return [device for device in self.__all_devices]
