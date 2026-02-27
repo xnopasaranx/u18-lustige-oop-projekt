@@ -29,7 +29,11 @@ def init_demo():
         demo_management.register_device(dev)
 
     # Rückgabe der device_id mit dem getter aus der Device Parentklasse, in einer kleinen List Comprehension...
-    return [dev.getinfo() for dev in demo_management.status_report()]
+    ret_liste = []
+    for dev in demo_management.status_report():
+        ret_liste.append(dev.getinfo())
+
+    return ret_liste
 
 print(init_demo())
 
@@ -58,4 +62,4 @@ def init_alarm_demo():
     print(alarm_sys.get_security_level())
     print(alarm_sys.trigger_alarm())
 
-init_alarm_demo()
+# init_alarm_demo()
